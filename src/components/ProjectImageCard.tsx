@@ -55,11 +55,8 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
 
         {/* Hover Overlay: Dark Charcoal Grey Matte with Yellow Heading, Description & Action */}
         <div className="absolute inset-0 bg-[#14151b]/98 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-200 flex flex-col justify-between p-5 sm:p-6 z-20">
-          {/* Top Row: Index with Yellow inside brackets and Tag */}
-          <div className="flex items-center justify-between text-xs sm:text-sm font-mono">
-            <span className="px-2.5 py-0.5 rounded font-bold text-amber-400 bg-amber-500/10 border border-amber-500/30">
-              [0{index + 1}]
-            </span>
+          {/* Top Row: Tag (Without numbering) */}
+          <div className="flex items-center justify-end text-xs sm:text-sm font-mono">
             <span className="px-2.5 py-0.5 rounded-md font-medium text-amber-300 bg-amber-500/15 border border-amber-500/30">
               {project.tag}
             </span>

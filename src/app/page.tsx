@@ -65,11 +65,9 @@ export default function Home() {
               Projects Showcase
             </h2>
           </div>
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-[#181920] border border-[#272935] text-sm sm:text-[14px] font-mono shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#181920] border border-[#272935] text-sm font-mono shadow-sm">
             <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
             <span className="text-zinc-200 font-medium">Hover over image for details</span>
-            <span className="text-zinc-500">•</span>
-            <span className="text-zinc-300">Click to read further</span>
           </div>
         </div>
 

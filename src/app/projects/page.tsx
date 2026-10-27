@@ -57,10 +57,10 @@ export default function ProjectsPage() {
             {/* Project Info & Description */}
             <div className="flex-1 flex flex-col justify-between space-y-3">
               <div className="space-y-2.5">
-                {/* Header row: Index & Project Tag (Yellow on and inside brackets) */}
+                {/* Header row: Project Name & Tag (Without numbering) */}
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-                  <span className="font-semibold text-amber-400 bg-[#13141a] px-2.5 py-0.5 rounded border border-amber-500/30">
-                    [{String(index + 1).padStart(2, "0")}] <span className="text-amber-300 font-medium">{project.name}</span>
+                  <span className="font-semibold text-zinc-300 bg-[#13141a] px-2.5 py-0.5 rounded border border-[#272935]">
+                    {project.name}
                   </span>
 
                   <span className="px-3 py-0.5 rounded text-xs font-medium font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30">
