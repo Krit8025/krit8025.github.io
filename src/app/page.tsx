@@ -9,17 +9,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="space-y-6 border-b border-[#272935] pb-12">
         <div className="space-y-3">
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-amber-400 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
             Krithik Kesav C
           </h1>
           <p className="text-xl sm:text-2xl font-bold text-zinc-100 leading-snug">
-            Final year student of Mechanical Engineering at BITS Pilani, Hyderabad Campus
+            Final year student of <span className="text-amber-400">Mechanical Engineering</span> at <span className="text-amber-300">BITS Pilani, Hyderabad Campus</span>
           </p>
           <p className="text-base sm:text-lg text-zinc-300 max-w-3xl leading-relaxed pt-1">
-            Interested in Computational modelling using data driven approaches for analyzing mechanical systems.
+            Interested in <span className="text-amber-400 font-semibold">Computational modelling</span> using <span className="text-amber-400 font-semibold">data driven approaches</span> for analyzing mechanical systems.
           </p>
           <p className="text-sm sm:text-base text-zinc-400 font-mono italic">
-            P.S. I also love machining for fun <span className="text-amber-400 not-italic font-sans font-bold">:)</span>
+            P.S. I also love <span className="text-amber-400 font-medium not-italic">machining for fun</span> <span className="text-amber-400 not-italic font-bold">:)</span>
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
             className="smooth-btn-secondary"
           >
             <span>Browse Projects</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
           </Link>
         </div>
       </section>

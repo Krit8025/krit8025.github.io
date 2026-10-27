@@ -152,14 +152,14 @@ a {
 }
 
 .markdown-body a {
-  color: #facc15;
+  color: #e2e4e9;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.15s ease;
 }
 
 .markdown-body a:hover {
-  color: #fef08a;
+  color: #ffffff;
 }
 
 .markdown-body pre {
@@ -177,11 +177,11 @@ a {
 .markdown-body code {
   font-family: var(--font-geist-mono), monospace;
   background: #1d1e26;
-  color: #fef08a;
+  color: #f4f4f5;
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-size: 0.875em;
-  border: 1px solid rgba(234, 179, 8, 0.25);
+  border: 1px solid #2e313d;
 }
 
 .markdown-body pre code {
@@ -201,14 +201,14 @@ a {
 }
 
 .markdown-body blockquote {
-  border-left: 3px solid #eab308;
-  background: rgba(234, 179, 8, 0.05);
+  border-left: 3px solid #3e4152;
+  background: #17181e;
   padding: 0.75rem 1.25rem;
   margin: 1.25rem 0;
   color: #d4d6dd;
   border-radius: 0 0.5rem 0.5rem 0;
   border: 1px solid #272935;
-  border-left: 3px solid #eab308;
+  border-left: 3px solid #3e4152;
 }
 
 .markdown-body table {
@@ -230,10 +230,10 @@ a {
 
 .markdown-body th {
   background: #1c1d24;
-  color: #fef08a;
+  color: #ffffff;
   font-family: var(--font-geist-mono), monospace;
   font-weight: 600;
-  border-bottom: 1px solid rgba(234, 179, 8, 0.25);
+  border-bottom: 1px solid #272935;
 }
 
 .markdown-body tr:nth-child(even) {
