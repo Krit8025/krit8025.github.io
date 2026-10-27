@@ -48,18 +48,12 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
           </div>
         )}
 
-        {/* Hover Overlay: Retro Gaming Pastel Panel Revealing Title */}
+        {/* Hover Overlay: Pure Title and Action */}
         <div className="absolute inset-0 bg-[#ffffff]/92 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-200 flex flex-col justify-between p-5 sm:p-6 border-b-2 border-[#1f222e]">
-          {/* Top Row: Stage / Level number & tag */}
+          {/* Top Row: Stage / Level number */}
           <div className="flex items-center justify-between text-xs font-mono">
             <span className="px-2 py-0.5 rounded font-bold bg-[#1f222e] text-white">
               STAGE 0{index + 1}
-            </span>
-            <span
-              className="px-2.5 py-0.5 rounded-full font-mono text-xs font-bold border-2 border-[#1f222e]"
-              style={{ backgroundColor: project.accentHex }}
-            >
-              {project.tags[0] || "Engineering"}
             </span>
           </div>
 
@@ -74,14 +68,6 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
               <ArrowUpRight className="w-3.5 h-3.5" />
             </div>
           </div>
-        </div>
-
-        {/* Corner Retro Pixel Accent Ribbon */}
-        <div
-          className="absolute top-2 right-2 px-2 py-0.5 rounded font-mono text-[10px] font-bold border-2 border-[#1f222e] shadow-[2px_2px_0px_#1f222e] z-10 group-hover:opacity-0 transition-opacity"
-          style={{ backgroundColor: project.accentHex }}
-        >
-          {project.tags[0]}
         </div>
       </div>
     </Link>

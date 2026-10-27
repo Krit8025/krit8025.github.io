@@ -78,9 +78,6 @@ export default function Home() {
             <Sparkles className="w-4 h-4 text-amber-500" />
             Looking for detailed project descriptions?
           </h3>
-          <p className="text-xs text-zinc-600 font-sans">
-            Explore the repository catalog with full descriptions, methodologies, and direct README access.
-          </p>
         </div>
 
         <Link

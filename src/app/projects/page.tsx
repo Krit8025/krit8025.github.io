@@ -45,23 +45,11 @@ export default function ProjectsPage() {
             className="group relative block p-6 sm:p-7 rounded-xl border-2 border-[#1f222e] bg-white shadow-[4px_4px_0px_#1f222e] hover:shadow-[7px_7px_0px_#1f222e] hover:-translate-y-1 transition-all duration-200 cursor-pointer"
           >
             <div className="space-y-3">
-              {/* Header row: Index & Tags */}
-              <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+              {/* Header row: Index */}
+              <div className="flex items-center justify-between gap-2 text-xs font-mono">
                 <span className="font-bold text-[#1f222e] bg-[#f3efe6] px-2 py-0.5 rounded border border-[#1f222e]/40">
                   [{String(index + 1).padStart(2, "0")}] {project.name}
                 </span>
-
-                <div className="flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold border-2 border-[#1f222e]"
-                      style={{ backgroundColor: project.accentHex }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               {/* Title */}
