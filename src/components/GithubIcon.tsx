@@ -1,13 +1,28 @@
 import React from "react";
 
-export function GithubIcon({ className = "w-4 h-4" }: { className?: string }) {
+export function GithubIcon({
+  className = "w-4 h-4",
+  size = 16,
+}: {
+  className?: string;
+  size?: number;
+}) {
   return (
     <svg
       className={className}
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
+      style={{
+        display: "inline-block",
+        verticalAlign: "middle",
+        flexShrink: 0,
+        maxWidth: "24px",
+        maxHeight: "24px",
+      }}
     >
       <path
         fillRule="evenodd"
@@ -17,4 +32,3 @@ export function GithubIcon({ className = "w-4 h-4" }: { className?: string }) {
     </svg>
   );
 }
-
