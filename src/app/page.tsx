@@ -23,16 +23,8 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Action Buttons: Only Email, Resume, Browse Projects */}
-        <div className="flex flex-wrap items-center gap-3.5 pt-2 font-mono text-xs">
-          <a
-            href="mailto:krithik2985@gmail.com"
-            className="smooth-btn-secondary"
-          >
-            <Mail className="w-4 h-4 text-zinc-300" />
-            <span>Email</span>
-          </a>
-
+        {/* Action Buttons: Resume First, then Email, Browse Projects */}
+        <div className="flex flex-wrap items-center gap-3.5 pt-2">
           <a
             href="/resume.pdf"
             target="_blank"
@@ -40,8 +32,16 @@ export default function Home() {
             className="smooth-btn-primary"
             title="Open Resume in new tab"
           >
-            <FileText className="w-4 h-4 text-black" />
+            <FileText className="w-[18px] h-[18px] text-black" />
             <span>Resume</span>
+          </a>
+
+          <a
+            href="mailto:krithik2985@gmail.com"
+            className="smooth-btn-secondary"
+          >
+            <Mail className="w-[18px] h-[18px] text-zinc-300" />
+            <span>Email</span>
           </a>
 
           <Link
@@ -49,7 +49,7 @@ export default function Home() {
             className="smooth-btn-secondary"
           >
             <span>Browse Projects</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
