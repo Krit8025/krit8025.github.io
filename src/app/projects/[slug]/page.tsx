@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10">
       {/* Navigation & Header */}
-      <div className="space-y-6 border-b border-[#1e293b] pb-8">
+      <div className="space-y-6 border-b border-[#1f2633] pb-8">
         <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
           <Link
             href="/projects"
@@ -65,8 +65,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Project Meta Banner */}
         <div className="space-y-4 pt-2">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium text-sky-200 bg-sky-500/20 border border-sky-400/30">
-              {project.name}
+            <span className="px-3 py-1 rounded-full text-xs font-mono font-medium text-sky-200 bg-sky-500/20 border border-sky-400/30">
+              {project.tag}
             </span>
             <span className="text-slate-600 font-mono text-xs">•</span>
             <span className="text-slate-400 font-mono text-xs">
@@ -99,8 +99,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </div>
 
       {/* Rendered README Container */}
-      <article className="rounded-xl border border-[#1e293b] bg-[#101623] p-6 sm:p-10 shadow-xl overflow-hidden">
-        <div className="flex items-center justify-between border-b border-[#1e293b] pb-4 mb-8 text-xs font-mono font-medium text-slate-400">
+      <article className="rounded-xl border border-[#1f2633] bg-[#111622] p-6 sm:p-10 shadow-xl overflow-hidden">
+        <div className="flex items-center justify-between border-b border-[#1f2633] pb-4 mb-8 text-xs font-mono font-medium text-slate-400">
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-sky-400" />
             <span className="text-slate-300">DOCUMENTATION // {project.readmeFile}</span>

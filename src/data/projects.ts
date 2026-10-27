@@ -7,9 +7,7 @@ export interface Project {
   defaultBranch: string;
   readmeFile: string;
   coverImage: string;
-  tags: string[];
-  pastelBg: string;
-  accentHex: string;
+  tag: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -24,9 +22,7 @@ export const PROJECTS: Project[] = [
     readmeFile: "README.md",
     coverImage:
       "https://raw.githubusercontent.com/Krit8025/Nozzle-Shape-Optimization---2D/master/anderson_moc_solver/flowfield_mach.png",
-    tags: ["Fluid Dynamics", "MOC Solver", "Optimization", "Python"],
-    pastelBg: "bg-[#bae6fd]", // Pastel Sky
-    accentHex: "#bae6fd",
+    tag: "Personal Project",
   },
   {
     slug: "Physics-informed-Gearbox-Fault-Diagnosis",
@@ -39,9 +35,7 @@ export const PROJECTS: Project[] = [
     readmeFile: "Readme.md",
     coverImage:
       "https://raw.githubusercontent.com/Krit8025/Physics-informed-Gearbox-Fault-Diagnosis/main/images/confusion_matrices_comparison.png",
-    tags: ["Machine Learning", "Vibration Analysis", "Diagnostics", "Python"],
-    pastelBg: "bg-[#bbf7d0]", // Pastel Mint
-    accentHex: "#bbf7d0",
+    tag: "BITS Hyderabad Research Project",
   },
   {
     slug: "BEMT-Shrouded-Propellers",
@@ -54,9 +48,7 @@ export const PROJECTS: Project[] = [
     readmeFile: "README.md",
     coverImage:
       "https://raw.githubusercontent.com/Krit8025/BEMT-Shrouded-Propellers/main/figure10.png",
-    tags: ["Aerodynamics", "BEMT", "Propulsion", "MATLAB / Python"],
-    pastelBg: "bg-[#fef08a]", // Pastel Lemon
-    accentHex: "#fef08a",
+    tag: "IIT Hyderabad Research Internship",
   },
   {
     slug: "Baja-ATV-Steering-Knuckle",
@@ -69,9 +61,7 @@ export const PROJECTS: Project[] = [
     readmeFile: "Readme.md",
     coverImage:
       "https://raw.githubusercontent.com/Krit8025/Baja-ATV-Steering-Knuckle/main/images/cad-knuckle.png",
-    tags: ["CAD / FEA", "Manufacturing", "Automotive Suspension", "SAE Baja"],
-    pastelBg: "bg-[#ddd6fe]", // Pastel Lavender
-    accentHex: "#ddd6fe",
+    tag: "SAE Baja",
   },
 ];
 
