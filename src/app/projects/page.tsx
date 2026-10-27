@@ -12,22 +12,22 @@ export default function ProjectsPage() {
   return (
     <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-10">
       {/* Header */}
-      <section className="space-y-4 border-b border-[#1e2433] pb-8">
+      <section className="space-y-4 border-b border-[#1f1f23] pb-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-slate-200 transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>← Back to Home</span>
         </Link>
 
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-slate-800 text-slate-300 border border-slate-700">
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-zinc-900 text-zinc-300 border border-zinc-800">
             <FolderGit2 className="w-3.5 h-3.5" />
             <span>PORTFOLIO DIRECTORY</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-mono font-bold tracking-tight text-slate-100">
+          <h1 className="text-3xl sm:text-5xl font-mono font-bold tracking-tight text-white">
             Engineering and Research Projects
           </h1>
         </div>
@@ -39,10 +39,10 @@ export default function ProjectsPage() {
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="group relative flex flex-col sm:flex-row gap-6 p-6 sm:p-7 rounded-xl border border-[#1e2433] bg-[#10141e] hover:border-slate-500 hover:bg-[#131926] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+            className="group relative flex flex-col sm:flex-row gap-6 p-6 sm:p-7 rounded-xl border border-[#1f1f23] bg-[#0a0a0d] hover:border-zinc-500 hover:bg-[#111114] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
           >
             {/* Project Image Thumbnail */}
-            <div className="relative w-full sm:w-56 aspect-[16/10] bg-white rounded-lg overflow-hidden shrink-0 border border-slate-700/60 p-2 flex items-center justify-center">
+            <div className="relative w-full sm:w-56 aspect-[16/10] bg-white rounded-lg overflow-hidden shrink-0 border border-zinc-800 p-2 flex items-center justify-center">
               <Image
                 src={project.coverImage}
                 alt={project.title}
@@ -59,37 +59,37 @@ export default function ProjectsPage() {
               <div className="space-y-2.5">
                 {/* Header row: Index & Project Tag */}
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-                  <span className="font-semibold text-slate-300 bg-slate-800 px-2.5 py-0.5 rounded border border-slate-700">
+                  <span className="font-semibold text-zinc-300 bg-zinc-900 px-2.5 py-0.5 rounded border border-zinc-800">
                     [{String(index + 1).padStart(2, "0")}] {project.name}
                   </span>
 
-                  <span className="px-3 py-0.5 rounded text-xs font-medium font-mono text-slate-200 bg-slate-800 border border-slate-700">
+                  <span className="px-3 py-0.5 rounded text-xs font-medium font-mono text-zinc-200 bg-zinc-800 border border-zinc-700">
                     {project.tag}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-lg sm:text-xl font-mono font-bold text-slate-100 group-hover:text-white transition-colors flex items-center justify-between gap-3">
+                <h2 className="text-lg sm:text-xl font-mono font-bold text-white group-hover:text-zinc-200 transition-colors flex items-center justify-between gap-3">
                   <span>{project.title}</span>
-                  <span className="text-xs font-mono text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:inline-flex items-center gap-1 shrink-0">
+                  <span className="text-xs font-mono text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:inline-flex items-center gap-1 shrink-0">
                     <span>Read Documentation</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </span>
                 </h2>
 
                 {/* Description */}
-                <p className="text-sm text-slate-300 leading-relaxed font-sans">
+                <p className="text-sm text-zinc-300 leading-relaxed font-sans">
                   {project.description}
                 </p>
               </div>
 
               {/* Bottom Row */}
-              <div className="flex items-center justify-between pt-2 text-xs font-mono text-slate-400">
-                <span className="font-medium text-slate-400 group-hover:text-slate-200 flex items-center gap-1 group-hover:underline">
+              <div className="flex items-center justify-between pt-2 text-xs font-mono text-zinc-400">
+                <span className="font-medium text-zinc-400 group-hover:text-zinc-200 flex items-center gap-1 group-hover:underline">
                   → Click anywhere to read further
                 </span>
 
-                <span className="text-slate-500">
+                <span className="text-zinc-500">
                   Branch: {project.defaultBranch}
                 </span>
               </div>

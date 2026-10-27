@@ -2,16 +2,16 @@
 @import "katex/dist/katex.min.css";
 
 :root {
-  --background: #0a0d14;
-  --surface: #10141e;
-  --surface-card: #121723;
-  --surface-hover: #161c2b;
-  --border-muted: #1e2433;
-  --border-active: #475569;
+  --background: #000000;
+  --surface: #0a0a0c;
+  --surface-card: #0e0e11;
+  --surface-hover: #141418;
+  --border-muted: #1f1f23;
+  --border-active: #3f3f46;
 
   --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
+  --text-secondary: #d4d4d8;
+  --text-muted: #71717a;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -36,14 +36,14 @@ a {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0d14;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2433;
+  background: #202024;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #3f3f46;
 }
 
 /* Matte Buttons */
@@ -51,8 +51,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #e2e8f0;
-  color: #0a0d14;
+  background: #ffffff;
+  color: #000000;
   font-weight: 600;
   border-radius: 0.375rem;
   padding: 0.55rem 1.15rem;
@@ -62,7 +62,7 @@ a {
 }
 
 .smooth-btn-primary:hover {
-  background: #ffffff;
+  background: #e4e4e7;
   transform: translateY(-1px);
 }
 
@@ -74,10 +74,10 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #10141e;
-  color: #cbd5e1;
+  background: #0d0d10;
+  color: #d4d4d8;
   font-weight: 500;
-  border: 1px solid #1e2433;
+  border: 1px solid #202024;
   border-radius: 0.375rem;
   padding: 0.55rem 1.15rem;
   font-family: var(--font-geist-mono), monospace;
@@ -86,9 +86,9 @@ a {
 }
 
 .smooth-btn-secondary:hover {
-  background: #151a27;
-  border-color: #475569;
-  color: #f8fafc;
+  background: #16161a;
+  border-color: #3f3f46;
+  color: #ffffff;
   transform: translateY(-1px);
 }
 
@@ -96,9 +96,9 @@ a {
   transform: translateY(0);
 }
 
-/* High-Readability Markdown Documentation */
+/* High-Readability Markdown Documentation (Black Theme) */
 .markdown-body {
-  color: #cbd5e1;
+  color: #d4d4d8;
   line-height: 1.8;
   font-size: 1rem;
 }
@@ -107,7 +107,7 @@ a {
 .markdown-body h2,
 .markdown-body h3,
 .markdown-body h4 {
-  color: #f8fafc;
+  color: #ffffff;
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 0.85rem;
@@ -117,22 +117,22 @@ a {
 
 .markdown-body h1 {
   font-size: 1.75rem;
-  color: #f1f5f9;
-  border-bottom: 1px solid #1e2433;
+  color: #ffffff;
+  border-bottom: 1px solid #202024;
   padding-bottom: 0.75rem;
   margin-bottom: 1.5rem;
 }
 
 .markdown-body h2 {
   font-size: 1.35rem;
-  color: #e2e8f0;
-  border-bottom: 1px dashed #1e2433;
+  color: #f4f4f5;
+  border-bottom: 1px dashed #202024;
   padding-bottom: 0.4rem;
 }
 
 .markdown-body h3 {
   font-size: 1.15rem;
-  color: #cbd5e1;
+  color: #e4e4e7;
 }
 
 .markdown-body p {
@@ -140,20 +140,20 @@ a {
 }
 
 .markdown-body a {
-  color: #93c5fd;
+  color: #e4e4e7;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.15s ease;
 }
 
 .markdown-body a:hover {
-  color: #bfdbfe;
+  color: #ffffff;
 }
 
 .markdown-body pre {
-  background: #0d1117 !important;
-  color: #f1f5f9 !important;
-  border: 1px solid #1e2433;
+  background: #0a0a0d !important;
+  color: #f4f4f5 !important;
+  border: 1px solid #202024;
   border-radius: 0.5rem;
   padding: 1.15rem;
   overflow-x: auto;
@@ -164,12 +164,12 @@ a {
 
 .markdown-body code {
   font-family: var(--font-geist-mono), monospace;
-  background: #141a26;
-  color: #cbd5e1;
+  background: #141417;
+  color: #f4f4f5;
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-size: 0.875em;
-  border: 1px solid #1e2433;
+  border: 1px solid #27272a;
 }
 
 .markdown-body pre code {
@@ -189,12 +189,14 @@ a {
 }
 
 .markdown-body blockquote {
-  border-left: 3px solid #475569;
-  background: #0f1420;
+  border-left: 3px solid #3f3f46;
+  background: #0d0d10;
   padding: 0.75rem 1.25rem;
   margin: 1.25rem 0;
-  color: #94a3b8;
+  color: #a1a1aa;
   border-radius: 0 0.5rem 0.5rem 0;
+  border: 1px solid #202024;
+  border-left-width: 3px;
 }
 
 .markdown-body table {
@@ -202,34 +204,34 @@ a {
   border-collapse: collapse;
   margin: 1.75rem 0;
   font-size: 0.875rem;
-  border: 1px solid #1e2433;
+  border: 1px solid #202024;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .markdown-body th,
 .markdown-body td {
-  border: 1px solid #1e2433;
+  border: 1px solid #202024;
   padding: 0.65rem 0.85rem;
   text-align: left;
 }
 
 .markdown-body th {
-  background: #141926;
-  color: #e2e8f0;
+  background: #121215;
+  color: #ffffff;
   font-family: var(--font-geist-mono), monospace;
   font-weight: 600;
 }
 
 .markdown-body tr:nth-child(even) {
-  background: #0d111a;
+  background: #08080a;
 }
 
 .markdown-body img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  border: 1px solid #1e2433;
+  border: 1px solid #202024;
   margin: 1.5rem auto;
   display: block;
 }
@@ -252,15 +254,15 @@ a {
 .katex-display {
   margin: 1.25rem 0 !important;
   padding: 0.85rem !important;
-  background: #0d111a;
+  background: #0a0a0d;
   border-radius: 0.5rem;
-  border: 1px solid #1e2433;
+  border: 1px solid #202024;
   overflow-x: auto;
   overflow-y: hidden;
-  color: #f1f5f9;
+  color: #f4f4f5;
 }
 
 .katex {
   font-size: 1.05em !important;
-  color: #e2e8f0;
+  color: #f4f4f5;
 }

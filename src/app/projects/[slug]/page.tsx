@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10">
       {/* Navigation & Header */}
-      <div className="space-y-6 border-b border-[#1e2433] pb-8">
+      <div className="space-y-6 border-b border-[#1f1f23] pb-8">
         <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
           <Link
             href="/projects"
@@ -56,7 +56,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           <Link
             href="/"
-            className="text-slate-400 hover:text-slate-200 font-medium font-mono text-xs transition-colors"
+            className="text-zinc-400 hover:text-white font-medium font-mono text-xs transition-colors"
           >
             Home
           </Link>
@@ -65,20 +65,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Project Meta Banner */}
         <div className="space-y-4 pt-2">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded text-xs font-mono font-medium text-slate-200 bg-slate-800 border border-slate-700">
+            <span className="px-3 py-1 rounded text-xs font-mono font-medium text-zinc-200 bg-zinc-800 border border-zinc-700">
               {project.tag}
             </span>
-            <span className="text-slate-600 font-mono text-xs">•</span>
-            <span className="text-slate-400 font-mono text-xs">
+            <span className="text-zinc-600 font-mono text-xs">•</span>
+            <span className="text-zinc-400 font-mono text-xs">
               Branch: {project.defaultBranch}
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-mono font-bold text-slate-100 tracking-tight">
+          <h1 className="text-2xl sm:text-4xl font-mono font-bold text-white tracking-tight">
             {project.title}
           </h1>
 
-          <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-300 font-sans leading-relaxed">
             {project.description}
           </p>
 
@@ -90,22 +90,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               rel="noopener noreferrer"
               className="smooth-btn-primary"
             >
-              <GithubIcon className="w-4 h-4 text-slate-900" />
+              <GithubIcon className="w-4 h-4 text-black" />
               <span>View Repository on GitHub</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-slate-700" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-zinc-800" />
             </a>
           </div>
         </div>
       </div>
 
       {/* Rendered README Container */}
-      <article className="rounded-xl border border-[#1e2433] bg-[#10141e] p-6 sm:p-10 shadow-sm overflow-hidden">
-        <div className="flex items-center justify-between border-b border-[#1e2433] pb-4 mb-8 text-xs font-mono font-medium text-slate-400">
+      <article className="rounded-xl border border-[#1f1f23] bg-[#0a0a0d] p-6 sm:p-10 shadow-sm overflow-hidden">
+        <div className="flex items-center justify-between border-b border-[#1f1f23] pb-4 mb-8 text-xs font-mono font-medium text-zinc-400">
           <div className="flex items-center gap-2">
-            <BookOpen className="w-4 h-4 text-slate-400" />
-            <span className="text-slate-300">DOCUMENTATION // {project.readmeFile}</span>
+            <BookOpen className="w-4 h-4 text-zinc-400" />
+            <span className="text-zinc-300">DOCUMENTATION // {project.readmeFile}</span>
           </div>
-          <span className="px-2.5 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300 border border-slate-700 hidden sm:inline">
+          <span className="px-2.5 py-0.5 rounded text-[11px] bg-zinc-800 text-zinc-300 border border-zinc-700 hidden sm:inline">
             Math &amp; Diagram Enabled
           </span>
         </div>
@@ -134,7 +134,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           href={project.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-slate-400 hover:text-slate-200 transition-colors font-medium"
+          className="text-zinc-400 hover:text-white transition-colors font-medium"
         >
           Contribute on GitHub ↗
         </a>

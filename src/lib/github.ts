@@ -36,6 +36,37 @@ export function removeBadgesAndLabels(markdown: string): string {
 }
 
 /**
+ * Strips sections related to file/repository structure, installation/quick start,
+ * and repo housekeeping notices so only the engineering case-study description remains.
+ */
+export function removeMaintenanceSections(markdown: string): string {
+  let cleaned = markdown;
+
+  const unwantedPatterns = [
+    // Table of contents
+    /(?:^|\n)##\s+(?:Table of Contents)[^\n]*\n(?:[\s\S]*?)(?=(?:\n##\s+)|$)/gi,
+    // File / Directory / Repository structure
+    /(?:^|\n)##\s+(?:Architecture[\s\S]*?Repository Structure|Repository Structure|Directory Structure|File Structure)[^\n]*\n(?:[\s\S]*?)(?=(?:\n##\s+)|$)/gi,
+    // Installation / Quick Start / Getting Started
+    /(?:^|\n)##\s+(?:Installation[\s\S]*?Quick Start|Installation|Getting Started|Quick Start|Prerequisites)[^\n]*\n(?:[\s\S]*?)(?=(?:\n##\s+)|$)/gi,
+    // Repository notices / Confidentiality
+    /(?:^|\n)##\s+(?:(?:\d+\.\s*)?Repository Notice[\s\S]*?Confidentiality|Repository Notice)[^\n]*\n(?:[\s\S]*?)(?=(?:\n##\s+)|$)/gi,
+  ];
+
+  for (const pattern of unwantedPatterns) {
+    cleaned = cleaned.replace(pattern, "\n");
+  }
+
+  // Remove lone table of contents list items
+  cleaned = cleaned.replace(/^-\s*\[(?:Architecture|Installation|Quick Start)[^\]]*\]\([^\)]*\)\s*$/gim, "");
+
+  // Clean trailing repo notice note
+  cleaned = cleaned.replace(/Source code and data is made private and would be considered for sharing upon request\./gi, "");
+
+  return cleaned.trim();
+}
+
+/**
  * Normalizes relative URLs in markdown to point to the raw GitHub repository content
  */
 export function rewriteMarkdownAssetUrls(
@@ -77,7 +108,8 @@ export function rewriteMarkdownAssetUrls(
 
 /**
  * Loads project README from GitHub API or local fallback,
- * strips badges, and normalizes all asset URLs.
+ * strips badges, removes maintenance/file-structure sections,
+ * and normalizes all asset URLs.
  */
 export async function getProjectReadme(slug: string): Promise<{
   content: string;
@@ -90,7 +122,7 @@ export async function getProjectReadme(slug: string): Promise<{
 
   let rawContent = "";
 
-  // 1. Try local cache first for guaranteed static build stability
+  // 1. Try local cache first
   try {
     const localPath = path.join(
       process.cwd(),
@@ -126,9 +158,12 @@ export async function getProjectReadme(slug: string): Promise<{
     };
   }
 
-  // Filter badges and rewrite asset paths
-  const cleanedBadges = removeBadgesAndLabels(rawContent);
-  const finalContent = rewriteMarkdownAssetUrls(cleanedBadges, project);
+  // 1. Filter shields/labels
+  const noBadges = removeBadgesAndLabels(rawContent);
+  // 2. Filter file-structure and installation sections
+  const noMaintenance = removeMaintenanceSections(noBadges);
+  // 3. Rewrite relative asset paths
+  const finalContent = rewriteMarkdownAssetUrls(noMaintenance, project);
 
   return {
     content: finalContent,

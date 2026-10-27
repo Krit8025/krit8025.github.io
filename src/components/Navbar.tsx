@@ -10,15 +10,15 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-[#0b0e14]/90 border-b border-[#1e2433]">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-[#000000]/90 border-b border-[#1f1f23]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Brand */}
         <Link
           href="/"
-          className="flex items-center gap-2 group font-mono text-sm tracking-tight text-slate-200 hover:text-white transition-colors"
+          className="flex items-center gap-2 group font-mono text-sm tracking-tight text-zinc-300 hover:text-white transition-colors"
         >
-          <span className="w-2 h-2 rounded-full bg-slate-400" />
-          <span className="font-semibold text-sm tracking-tight text-slate-200 group-hover:text-white transition-colors">
+          <span className="w-2 h-2 rounded-full bg-zinc-400" />
+          <span className="font-semibold text-sm tracking-tight text-zinc-200 group-hover:text-white transition-colors">
             Engineering Portfolio - Krithik Kesav C
           </span>
         </Link>
@@ -31,8 +31,8 @@ export default function Navbar() {
               href="/"
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-colors ${
                 pathname === "/"
-                  ? "bg-slate-800 text-slate-100 border-slate-700"
-                  : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 border-transparent"
+                  ? "bg-zinc-800 text-white border-zinc-700"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 border-transparent"
               }`}
             >
               <HomeIcon className="w-3.5 h-3.5" />
@@ -43,8 +43,8 @@ export default function Navbar() {
               href="/projects"
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-colors ${
                 pathname === "/projects" || pathname.startsWith("/projects/")
-                  ? "bg-slate-800 text-slate-100 border-slate-700"
-                  : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 border-transparent"
+                  ? "bg-zinc-800 text-white border-zinc-700"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 border-transparent"
               }`}
             >
               <FolderGit2 className="w-3.5 h-3.5" />
@@ -53,7 +53,7 @@ export default function Navbar() {
           </nav>
 
           {/* Clear Separation Divider */}
-          <div className="h-5 w-px bg-slate-700" aria-hidden="true" />
+          <div className="h-5 w-px bg-zinc-800" aria-hidden="true" />
 
           {/* Contact Icons Only */}
           <div className="flex items-center gap-1">
@@ -61,7 +61,7 @@ export default function Navbar() {
               href="https://github.com/Krit8025"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 transition-colors"
+              className="p-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-900 transition-colors"
               title="GitHub: Krit8025"
               aria-label="GitHub Profile"
             >
@@ -72,7 +72,7 @@ export default function Navbar() {
               href="https://www.linkedin.com/in/krithik-kesav"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 transition-colors"
+              className="p-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-900 transition-colors"
               title="LinkedIn: krithik-kesav"
               aria-label="LinkedIn Profile"
             >
@@ -81,7 +81,7 @@ export default function Navbar() {
 
             <a
               href="mailto:krithik2985@gmail.com"
-              className="p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 transition-colors"
+              className="p-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-900 transition-colors"
               title="Email: krithik2985@gmail.com"
               aria-label="Send Email"
             >

@@ -17,7 +17,7 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group relative block w-full rounded-xl overflow-hidden border border-[#1e2433] bg-[#10141e] hover:border-slate-500 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
+      className="group relative block w-full rounded-xl overflow-hidden border border-[#1f1f23] bg-[#0a0a0d] hover:border-zinc-500 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
     >
       {/* Uniform Clean White Canvas Container */}
       <div
@@ -42,36 +42,36 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
             unoptimized
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center p-6 text-slate-500 bg-slate-100">
-            <FolderGit2 className="w-12 h-12 mb-2 text-slate-600" />
-            <span className="font-mono text-xs text-slate-700">{project.name}</span>
+          <div className="w-full h-full flex flex-col items-center justify-center p-6 text-zinc-500 bg-zinc-100">
+            <FolderGit2 className="w-12 h-12 mb-2 text-zinc-600" />
+            <span className="font-mono text-xs text-zinc-700">{project.name}</span>
           </div>
         )}
 
-        {/* Persistent Corner Tag Pill (clean dark badge on white canvas) */}
-        <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium text-slate-200 bg-[#0d121c]/90 border border-slate-700 shadow-sm z-10 group-hover:opacity-0 transition-opacity duration-150">
+        {/* Persistent Corner Tag Pill */}
+        <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium text-zinc-200 bg-[#000000]/90 border border-zinc-700 shadow-sm z-10 group-hover:opacity-0 transition-opacity duration-150">
           {project.tag}
         </div>
 
-        {/* Hover Overlay: Dark Matte Covering the Canvas with Title & Action */}
-        <div className="absolute inset-0 bg-[#0b0f17]/94 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-200 flex flex-col justify-between p-5 sm:p-6 z-20">
+        {/* Hover Overlay: Pure Black Matte with Title & Action */}
+        <div className="absolute inset-0 bg-[#000000]/95 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-200 flex flex-col justify-between p-5 sm:p-6 z-20">
           {/* Top Row: Index and Tag */}
           <div className="flex items-center justify-between text-xs font-mono">
-            <span className="px-2 py-0.5 rounded text-xs font-medium text-slate-400 bg-white/[0.06] border border-white/10">
+            <span className="px-2 py-0.5 rounded text-xs font-medium text-zinc-400 bg-white/[0.06] border border-white/10">
               0{index + 1}
             </span>
-            <span className="px-2.5 py-0.5 rounded-md text-xs font-medium text-slate-200 bg-slate-800 border border-slate-700">
+            <span className="px-2.5 py-0.5 rounded-md text-xs font-medium text-zinc-200 bg-zinc-800 border border-zinc-700">
               {project.tag}
             </span>
           </div>
 
           {/* Center / Bottom: Title & Action */}
           <div className="space-y-2.5 translate-y-2 group-hover:translate-y-0 transition-transform duration-200">
-            <h3 className="font-mono text-base sm:text-lg font-bold text-slate-100 leading-snug">
+            <h3 className="font-mono text-base sm:text-lg font-bold text-white leading-snug">
               {project.title}
             </h3>
 
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-200 hover:bg-white text-slate-900 font-mono text-xs font-semibold transition-colors">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white hover:bg-zinc-200 text-black font-mono text-xs font-semibold transition-colors">
               <span>Click to read further</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </div>
