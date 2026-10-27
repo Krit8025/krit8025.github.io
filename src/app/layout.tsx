@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Krithik | Engineering & Computational Systems Portfolio",
+  title: "Krithik Kesav | Engineering Portfolio",
   description:
-    "Portfolio of computational engineering, aerodynamics, fluid dynamics, and diagnostics projects by Krithik (Krit8025).",
+    "Engineering portfolio of Krithik Kesav - Final year student of Mechanical Engineering at BITS Pilani, Hyderabad Campus.",
 };
 
 export default function RootLayout({
@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#0d0f14] text-zinc-100 selection:bg-emerald-900/50 selection:text-emerald-200">
+      <body className="min-h-full flex flex-col bg-[#fbf9f4] text-[#1f222e] selection:bg-[#bbf7d0] selection:text-[#1f222e]">
         <Navbar />
         <div className="flex-1">{children}</div>
         <Footer />

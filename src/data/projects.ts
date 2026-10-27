@@ -8,7 +8,7 @@ export interface Project {
   readmeFile: string;
   coverImage: string;
   tags: string[];
-  accentColor: string; // pastel color class
+  pastelBg: string;
   accentHex: string;
 }
 
@@ -24,8 +24,8 @@ export const PROJECTS: Project[] = [
     readmeFile: "README.md",
     coverImage:
       "https://raw.githubusercontent.com/Krit8025/Nozzle-Shape-Optimization---2D/master/anderson_moc_solver/flowfield_mach.png",
-    tags: ["Fluid Dynamics", "Method of Characteristics", "Optimization", "Python"],
-    accentColor: "border-sky-300 text-sky-200",
+    tags: ["Fluid Dynamics", "MOC Solver", "Optimization", "Python"],
+    pastelBg: "bg-[#bae6fd]", // Pastel Sky
     accentHex: "#bae6fd",
   },
   {
@@ -39,9 +39,9 @@ export const PROJECTS: Project[] = [
     readmeFile: "Readme.md",
     coverImage:
       "https://raw.githubusercontent.com/Krit8025/Physics-informed-Gearbox-Fault-Diagnosis/main/images/confusion_matrices_comparison.png",
-    tags: ["Machine Learning", "Vibration Analysis", "Physics-Informed", "Diagnostics"],
-    accentColor: "border-emerald-300 text-emerald-200",
-    accentHex: "#a7f3d0",
+    tags: ["Machine Learning", "Vibration Analysis", "Diagnostics", "Python"],
+    pastelBg: "bg-[#bbf7d0]", // Pastel Mint
+    accentHex: "#bbf7d0",
   },
   {
     slug: "BEMT-Shrouded-Propellers",
@@ -54,9 +54,9 @@ export const PROJECTS: Project[] = [
     readmeFile: "README.md",
     coverImage:
       "https://raw.githubusercontent.com/Krit8025/BEMT-Shrouded-Propellers/main/figure10.png",
-    tags: ["Aerodynamics", "BEMT", "Propulsion", "Python / MATLAB"],
-    accentColor: "border-amber-300 text-amber-200",
-    accentHex: "#fde68a",
+    tags: ["Aerodynamics", "BEMT", "Propulsion", "MATLAB / Python"],
+    pastelBg: "bg-[#fef08a]", // Pastel Lemon
+    accentHex: "#fef08a",
   },
   {
     slug: "Baja-ATV-Steering-Knuckle",
@@ -70,7 +70,7 @@ export const PROJECTS: Project[] = [
     coverImage:
       "https://raw.githubusercontent.com/Krit8025/Baja-ATV-Steering-Knuckle/main/images/cad-knuckle.png",
     tags: ["CAD / FEA", "Manufacturing", "Automotive Suspension", "SAE Baja"],
-    accentColor: "border-purple-300 text-purple-200",
+    pastelBg: "bg-[#ddd6fe]", // Pastel Lavender
     accentHex: "#ddd6fe",
   },
 ];
@@ -80,4 +80,3 @@ export function getProjectBySlug(slug: string): Project | undefined {
     (p) => p.slug.toLowerCase() === decodeURIComponent(slug).toLowerCase()
   );
 }
-

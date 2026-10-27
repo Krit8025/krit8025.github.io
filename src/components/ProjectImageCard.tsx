@@ -17,25 +17,17 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group relative block w-full rounded-xl overflow-hidden border border-[#232738] bg-[#141722] hover:border-zinc-500/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1"
-      style={{
-        display: "block",
-        position: "relative",
-        borderRadius: "0.75rem",
-        overflow: "hidden",
-        backgroundColor: "#141722",
-      }}
+      className="group relative block w-full rounded-xl overflow-hidden border-2 border-[#1f222e] bg-white shadow-[4px_4px_0px_#1f222e] hover:shadow-[7px_7px_0px_#1f222e] hover:-translate-y-1 transition-all duration-200"
     >
       {/* 16:10 Aspect Ratio Container */}
       <div
-        className="relative aspect-[16/10] w-full overflow-hidden bg-[#0d0f15]"
+        className="relative aspect-[16/10] w-full overflow-hidden bg-[#f0ebe1]"
         style={{
           position: "relative",
           width: "100%",
           aspectRatio: "16 / 10",
           minHeight: "220px",
           overflow: "hidden",
-          backgroundColor: "#0d0f15",
         }}
       >
         {!imageError ? (
@@ -44,60 +36,53 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105 filter brightness-[0.88] contrast-[1.05] group-hover:brightness-100"
+            className="object-cover object-center transition-transform duration-300 ease-out group-hover:scale-105"
             style={{ objectFit: "cover", objectPosition: "center" }}
             onError={() => setImageError(true)}
             unoptimized
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center p-6 text-zinc-500 bg-[#12151e]">
+          <div className="w-full h-full flex flex-col items-center justify-center p-6 text-zinc-500 bg-[#f7f3ec]">
             <FolderGit2 className="w-12 h-12 mb-2 text-zinc-600" />
             <span className="font-mono text-xs">{project.name}</span>
           </div>
         )}
 
-        {/* Retro Grid Lines Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0e14]/90 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity pointer-events-none" />
-
-        {/* Hover Overlay: Dark Retro Panel Revealing Title */}
-        <div className="absolute inset-0 bg-[#0d0f15]/85 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-250 flex flex-col justify-between p-5 sm:p-6">
-          {/* Top Row: Index number & tag */}
+        {/* Hover Overlay: Retro Gaming Pastel Panel Revealing Title */}
+        <div className="absolute inset-0 bg-[#ffffff]/92 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-200 flex flex-col justify-between p-5 sm:p-6 border-b-2 border-[#1f222e]">
+          {/* Top Row: Stage / Level number & tag */}
           <div className="flex items-center justify-between text-xs font-mono">
-            <span className="text-zinc-500 font-mono">
-              0{index + 1} // REPO
+            <span className="px-2 py-0.5 rounded font-bold bg-[#1f222e] text-white">
+              STAGE 0{index + 1}
             </span>
             <span
-              className="px-2 py-0.5 rounded text-[11px] font-mono border"
-              style={{
-                borderColor: `${project.accentHex}40`,
-                color: project.accentHex,
-                backgroundColor: `${project.accentHex}10`,
-              }}
+              className="px-2.5 py-0.5 rounded-full font-mono text-xs font-bold border-2 border-[#1f222e]"
+              style={{ backgroundColor: project.accentHex }}
             >
               {project.tags[0] || "Engineering"}
             </span>
           </div>
 
           {/* Center / Bottom: Title & Action */}
-          <div className="space-y-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-250">
-            <h3 className="font-mono text-base sm:text-lg font-semibold text-zinc-100 leading-snug">
+          <div className="space-y-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-200">
+            <h3 className="font-mono text-base sm:text-lg font-bold text-[#1f222e] leading-snug">
               {project.title}
             </h3>
 
-            <div className="flex items-center gap-1.5 text-xs font-mono text-zinc-400 group-hover:text-emerald-300 transition-colors pt-1">
-              <span>View Documentation &amp; README</span>
-              <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#1f222e] text-white text-xs font-mono font-bold shadow-[2px_2px_0px_rgba(0,0,0,0.2)]">
+              <span>Inspect Documentation</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </div>
           </div>
         </div>
 
-        {/* Corner Retro Pastel Accent Marker */}
+        {/* Corner Retro Pixel Accent Ribbon */}
         <div
-          className="absolute top-0 right-0 w-8 h-8 pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity"
-          style={{
-            background: `linear-gradient(135deg, transparent 50%, ${project.accentHex}40 50%)`,
-          }}
-        />
+          className="absolute top-2 right-2 px-2 py-0.5 rounded font-mono text-[10px] font-bold border-2 border-[#1f222e] shadow-[2px_2px_0px_#1f222e] z-10 group-hover:opacity-0 transition-opacity"
+          style={{ backgroundColor: project.accentHex }}
+        >
+          {project.tags[0]}
+        </div>
       </div>
     </Link>
   );

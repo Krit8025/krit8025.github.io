@@ -2,67 +2,71 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FolderGit2, LayoutGrid } from "lucide-react";
+import { FolderGit2, LayoutGrid, Gamepad2 } from "lucide-react";
 import { GithubIcon } from "@/components/GithubIcon";
 
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-[#0d0f14]/85 border-b border-[#232738]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Terminal Brand */}
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-[#fbf9f4]/95 border-b-2 border-[#1f222e]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        {/* Retro Gaming Brand */}
         <Link
           href="/"
-          className="flex items-center gap-2 group font-mono text-sm tracking-tight text-zinc-300 hover:text-white transition-colors"
+          className="flex items-center gap-2.5 group font-mono text-sm tracking-tight text-[#1f222e] hover:opacity-85 transition-opacity"
         >
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse inline-block shadow-[0_0_8px_rgba(52,211,153,0.5)]" />
-          <span className="text-emerald-300 font-semibold">krit8025</span>
-          <span className="text-zinc-600">:~$</span>
-          <span className="hidden sm:inline text-zinc-400 group-hover:text-zinc-200 transition-colors">
-            portfolio
-          </span>
+          <div className="w-8 h-8 rounded-md bg-[#bbf7d0] border-2 border-[#1f222e] shadow-[2px_2px_0px_#1f222e] flex items-center justify-center">
+            <Gamepad2 className="w-4 h-4 text-[#1f222e]" />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold text-sm tracking-tight leading-none text-[#1f222e]">
+              Krithik Kesav
+            </span>
+            <span className="text-[10px] font-mono text-zinc-600 tracking-wider">
+              [PRESS START]
+            </span>
+          </div>
         </Link>
 
         {/* Navigation Tabs */}
-        <nav className="flex items-center gap-1 sm:gap-3 text-xs sm:text-sm font-mono">
+        <nav className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-mono font-semibold">
           <Link
             href="/"
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all border ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border-2 border-[#1f222e] transition-all ${
               pathname === "/"
-                ? "bg-[#181b26] text-emerald-200 border-emerald-500/30 shadow-sm"
-                : "text-zinc-400 hover:text-zinc-200 hover:bg-[#151722] border-transparent"
+                ? "bg-[#bbf7d0] shadow-[2px_2px_0px_#1f222e] translate-x-[-1px] translate-y-[-1px]"
+                : "bg-white hover:bg-[#fed7aa] shadow-[1px_1px_0px_#1f222e] hover:shadow-[2px_2px_0px_#1f222e]"
             }`}
           >
             <LayoutGrid className="w-3.5 h-3.5" />
-            <span>Visual Gallery</span>
+            <span>Gallery</span>
           </Link>
 
           <Link
             href="/projects"
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all border ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border-2 border-[#1f222e] transition-all ${
               pathname === "/projects" || pathname.startsWith("/projects/")
-                ? "bg-[#181b26] text-purple-200 border-purple-500/30 shadow-sm"
-                : "text-zinc-400 hover:text-zinc-200 hover:bg-[#151722] border-transparent"
+                ? "bg-[#ddd6fe] shadow-[2px_2px_0px_#1f222e] translate-x-[-1px] translate-y-[-1px]"
+                : "bg-white hover:bg-[#fed7aa] shadow-[1px_1px_0px_#1f222e] hover:shadow-[2px_2px_0px_#1f222e]"
             }`}
           >
             <FolderGit2 className="w-3.5 h-3.5" />
-            <span>All Projects</span>
+            <span>Projects</span>
           </Link>
 
           <a
             href="https://github.com/Krit8025"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-[#151722] transition-colors border border-transparent"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-[#bae6fd] border-2 border-[#1f222e] shadow-[1px_1px_0px_#1f222e] hover:shadow-[2px_2px_0px_#1f222e] transition-all"
             title="GitHub Profile"
           >
             <GithubIcon className="w-3.5 h-3.5" />
-            <span className="hidden md:inline">GitHub</span>
+            <span className="hidden sm:inline">GitHub</span>
           </a>
         </nav>
       </div>
     </header>
   );
 }
-
