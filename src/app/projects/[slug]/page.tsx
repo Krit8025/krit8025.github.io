@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Project Meta Banner */}
         <div className="space-y-4 pt-2">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded text-xs font-mono font-medium text-zinc-200 bg-zinc-800 border border-zinc-700">
+            <span className="px-3 py-1 rounded text-xs font-mono font-medium text-amber-300 bg-amber-500/10 border border-amber-500/30">
               {project.tag}
             </span>
             <span className="text-zinc-600 font-mono text-xs">•</span>
@@ -92,7 +92,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             >
               <GithubIcon className="w-4 h-4 text-black" />
               <span>View Repository on GitHub</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-zinc-800" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-black" />
             </a>
           </div>
         </div>
@@ -102,10 +102,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <article className="rounded-xl border border-[#1f1f23] bg-[#0a0a0d] p-6 sm:p-10 shadow-sm overflow-hidden">
         <div className="flex items-center justify-between border-b border-[#1f1f23] pb-4 mb-8 text-xs font-mono font-medium text-zinc-400">
           <div className="flex items-center gap-2">
-            <BookOpen className="w-4 h-4 text-zinc-400" />
+            <BookOpen className="w-4 h-4 text-amber-400" />
             <span className="text-zinc-300">DOCUMENTATION // {project.readmeFile}</span>
           </div>
-          <span className="px-2.5 py-0.5 rounded text-[11px] bg-zinc-800 text-zinc-300 border border-zinc-700 hidden sm:inline">
+          <span className="px-2.5 py-0.5 rounded text-[11px] bg-amber-500/10 text-amber-300 border border-amber-500/30 hidden sm:inline">
             Math &amp; Diagram Enabled
           </span>
         </div>
@@ -134,7 +134,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           href={project.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-400 hover:text-white transition-colors font-medium"
+          className="text-zinc-400 hover:text-amber-300 transition-colors font-medium"
         >
           Contribute on GitHub ↗
         </a>

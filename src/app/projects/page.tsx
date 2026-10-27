@@ -15,15 +15,15 @@ export default function ProjectsPage() {
       <section className="space-y-4 border-b border-[#1f1f23] pb-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-white transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-amber-300 transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>← Back to Home</span>
         </Link>
 
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-zinc-900 text-zinc-300 border border-zinc-800">
-            <FolderGit2 className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-amber-500/10 text-amber-300 border border-amber-500/30">
+            <FolderGit2 className="w-3.5 h-3.5 text-amber-400" />
             <span>PORTFOLIO DIRECTORY</span>
           </div>
 
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="group relative flex flex-col sm:flex-row gap-6 p-6 sm:p-7 rounded-xl border border-[#1f1f23] bg-[#0a0a0d] hover:border-zinc-500 hover:bg-[#111114] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+            className="group relative flex flex-col sm:flex-row gap-6 p-6 sm:p-7 rounded-xl border border-[#1f1f23] bg-[#0a0a0d] hover:border-amber-500/50 hover:bg-[#0e0e11] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-[0_4px_20px_rgba(234,179,8,0.05)]"
           >
             {/* Project Image Thumbnail */}
             <div className="relative w-full sm:w-56 aspect-[16/10] bg-white rounded-lg overflow-hidden shrink-0 border border-zinc-800 p-2 flex items-center justify-center">
@@ -63,15 +63,15 @@ export default function ProjectsPage() {
                     [{String(index + 1).padStart(2, "0")}] {project.name}
                   </span>
 
-                  <span className="px-3 py-0.5 rounded text-xs font-medium font-mono text-zinc-200 bg-zinc-800 border border-zinc-700">
+                  <span className="px-3 py-0.5 rounded text-xs font-medium font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30">
                     {project.tag}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-lg sm:text-xl font-mono font-bold text-white group-hover:text-zinc-200 transition-colors flex items-center justify-between gap-3">
+                <h2 className="text-lg sm:text-xl font-mono font-bold text-white group-hover:text-zinc-100 transition-colors flex items-center justify-between gap-3">
                   <span>{project.title}</span>
-                  <span className="text-xs font-mono text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:inline-flex items-center gap-1 shrink-0">
+                  <span className="text-xs font-mono text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:inline-flex items-center gap-1 shrink-0">
                     <span>Read Documentation</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </span>
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
 
               {/* Bottom Row */}
               <div className="flex items-center justify-between pt-2 text-xs font-mono text-zinc-400">
-                <span className="font-medium text-zinc-400 group-hover:text-zinc-200 flex items-center gap-1 group-hover:underline">
+                <span className="font-medium text-zinc-400 group-hover:text-amber-300 flex items-center gap-1 group-hover:underline">
                   → Click anywhere to read further
                 </span>
 

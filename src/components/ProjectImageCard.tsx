@@ -17,7 +17,7 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group relative block w-full rounded-xl overflow-hidden border border-[#1f1f23] bg-[#0a0a0d] hover:border-zinc-500 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
+      className="group relative block w-full rounded-xl overflow-hidden border border-[#1f1f23] bg-[#0a0a0d] hover:border-amber-500/50 transition-all duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(234,179,8,0.06)] hover:-translate-y-1"
     >
       {/* Uniform Clean White Canvas Container */}
       <div
@@ -48,8 +48,8 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
           </div>
         )}
 
-        {/* Persistent Corner Tag Pill */}
-        <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium text-zinc-200 bg-[#000000]/90 border border-zinc-700 shadow-sm z-10 group-hover:opacity-0 transition-opacity duration-150">
+        {/* Persistent Corner Tag Pill (Secondary Warm Yellow Accent) */}
+        <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium text-amber-300 bg-[#000000]/95 border border-amber-500/40 shadow-sm z-10 group-hover:opacity-0 transition-opacity duration-150">
           {project.tag}
         </div>
 
@@ -60,7 +60,7 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
             <span className="px-2 py-0.5 rounded text-xs font-medium text-zinc-400 bg-white/[0.06] border border-white/10">
               0{index + 1}
             </span>
-            <span className="px-2.5 py-0.5 rounded-md text-xs font-medium text-zinc-200 bg-zinc-800 border border-zinc-700">
+            <span className="px-2.5 py-0.5 rounded-md text-xs font-medium text-amber-300 bg-amber-500/15 border border-amber-500/30">
               {project.tag}
             </span>
           </div>
@@ -71,7 +71,7 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
               {project.title}
             </h3>
 
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white hover:bg-zinc-200 text-black font-mono text-xs font-semibold transition-colors">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-400 hover:bg-amber-300 text-black font-mono text-xs font-semibold transition-colors">
               <span>Click to read further</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </div>

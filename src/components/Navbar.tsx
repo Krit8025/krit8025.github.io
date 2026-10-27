@@ -17,7 +17,7 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 group font-mono text-sm tracking-tight text-zinc-300 hover:text-white transition-colors"
         >
-          <span className="w-2 h-2 rounded-full bg-zinc-400" />
+          <span className="w-2 h-2 rounded-full bg-amber-400" />
           <span className="font-semibold text-sm tracking-tight text-zinc-200 group-hover:text-white transition-colors">
             Engineering Portfolio - Krithik Kesav C
           </span>
@@ -31,8 +31,8 @@ export default function Navbar() {
               href="/"
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-colors ${
                 pathname === "/"
-                  ? "bg-zinc-800 text-white border-zinc-700"
-                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 border-transparent"
+                  ? "bg-amber-500/10 text-amber-300 border-amber-500/30"
+                  : "text-zinc-400 hover:text-amber-200 hover:bg-zinc-900 border-transparent"
               }`}
             >
               <HomeIcon className="w-3.5 h-3.5" />
@@ -43,8 +43,8 @@ export default function Navbar() {
               href="/projects"
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-colors ${
                 pathname === "/projects" || pathname.startsWith("/projects/")
-                  ? "bg-zinc-800 text-white border-zinc-700"
-                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 border-transparent"
+                  ? "bg-amber-500/10 text-amber-300 border-amber-500/30"
+                  : "text-zinc-400 hover:text-amber-200 hover:bg-zinc-900 border-transparent"
               }`}
             >
               <FolderGit2 className="w-3.5 h-3.5" />
@@ -61,7 +61,7 @@ export default function Navbar() {
               href="https://github.com/Krit8025"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-900 transition-colors"
+              className="p-2 rounded-md text-zinc-400 hover:text-amber-300 hover:bg-zinc-900 transition-colors"
               title="GitHub: Krit8025"
               aria-label="GitHub Profile"
             >
@@ -72,7 +72,7 @@ export default function Navbar() {
               href="https://www.linkedin.com/in/krithik-kesav"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-900 transition-colors"
+              className="p-2 rounded-md text-zinc-400 hover:text-amber-300 hover:bg-zinc-900 transition-colors"
               title="LinkedIn: krithik-kesav"
               aria-label="LinkedIn Profile"
             >
@@ -81,7 +81,7 @@ export default function Navbar() {
 
             <a
               href="mailto:krithik2985@gmail.com"
-              className="p-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-900 transition-colors"
+              className="p-2 rounded-md text-zinc-400 hover:text-amber-300 hover:bg-zinc-900 transition-colors"
               title="Email: krithik2985@gmail.com"
               aria-label="Send Email"
             >

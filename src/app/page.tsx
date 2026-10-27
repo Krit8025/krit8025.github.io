@@ -19,7 +19,7 @@ export default function Home() {
             Interested in Computational modelling using data driven approaches for analyzing mechanical systems.
           </p>
           <p className="text-sm sm:text-base text-zinc-400 font-mono italic">
-            P.S. I also love machining for fun :)
+            P.S. I also love machining for fun <span className="text-amber-400 not-italic font-sans">:)</span>
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Home() {
       <section className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#1f1f23] pb-4">
           <div className="space-y-1">
-            <span className="text-xs font-mono text-zinc-400 font-semibold tracking-wider uppercase">
+            <span className="text-xs font-mono text-amber-400 font-semibold tracking-wider uppercase">
               Featured Work
             </span>
             <h2 className="text-2xl sm:text-3xl font-mono font-bold text-white tracking-tight">
