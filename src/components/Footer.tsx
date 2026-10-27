@@ -4,13 +4,13 @@ import { LinkedinIcon } from "@/components/LinkedinIcon";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#1f1f23] bg-[#000000] mt-auto">
+    <footer className="border-t border-[#272935] bg-[#16171d] mt-auto">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-400">
         <div className="flex items-center gap-2">
           <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-          <span className="font-medium text-zinc-300">Krithik Kesav C</span>
+          <span className="font-medium text-zinc-200">Krithik Kesav C</span>
           <span>•</span>
-          <span className="text-zinc-500">BITS Pilani, Hyderabad Campus</span>
+          <span className="text-zinc-400">BITS Pilani, Hyderabad Campus</span>
         </div>
 
         {/* Contact Icons */}
@@ -19,7 +19,7 @@ export default function Footer() {
             href="https://github.com/Krit8025"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md bg-[#0a0a0d] border border-[#202024] hover:border-amber-500/40 hover:text-amber-300 transition-colors"
+            className="p-2 rounded-md bg-[#1a1b22] border border-[#272935] hover:border-amber-500/40 hover:text-amber-300 transition-colors"
             title="GitHub: Krit8025"
             aria-label="GitHub Profile"
           >
@@ -30,7 +30,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/krithik-kesav"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md bg-[#0a0a0d] border border-[#202024] hover:border-amber-500/40 hover:text-amber-300 transition-colors"
+            className="p-2 rounded-md bg-[#1a1b22] border border-[#272935] hover:border-amber-500/40 hover:text-amber-300 transition-colors"
             title="LinkedIn: krithik-kesav"
             aria-label="LinkedIn Profile"
           >
@@ -39,7 +39,7 @@ export default function Footer() {
 
           <a
             href="mailto:krithik2985@gmail.com"
-            className="p-2 rounded-md bg-[#0a0a0d] border border-[#202024] hover:border-amber-500/40 hover:text-amber-300 transition-colors"
+            className="p-2 rounded-md bg-[#1a1b22] border border-[#272935] hover:border-amber-500/40 hover:text-amber-300 transition-colors"
             title="Email: krithik2985@gmail.com"
             aria-label="Send Email"
           >

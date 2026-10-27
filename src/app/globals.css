@@ -2,12 +2,14 @@
 @import "katex/dist/katex.min.css";
 
 :root {
-  --background: #000000;
-  --surface: #0a0a0c;
-  --surface-card: #0e0e11;
-  --surface-hover: #141418;
-  --border-muted: #1f1f23;
-  --border-active: #3f3f46;
+  /* Rich Charcoal Grey Palette instead of plain black */
+  --background: #111216;
+  --header-bg: #18191f;
+  --surface: #16171c;
+  --surface-card: #191a20;
+  --surface-hover: #21222b;
+  --border-muted: #272935;
+  --border-active: #3e4152;
 
   /* Secondary Warm Yellow / Amber Palette */
   --secondary: #eab308;
@@ -18,8 +20,8 @@
   --secondary-border: rgba(234, 179, 8, 0.3);
 
   --text-primary: #f8fafc;
-  --text-secondary: #d4d4d8;
-  --text-muted: #71717a;
+  --text-secondary: #d4d6dd;
+  --text-muted: #9497a1;
 }
 
 body {
@@ -29,7 +31,7 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -44,14 +46,14 @@ a {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #111216;
 }
 ::-webkit-scrollbar-thumb {
-  background: #202024;
+  background: #272935;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #3e4152;
 }
 
 /* Matte Buttons with Warm Yellow Secondary Accents */
@@ -84,10 +86,10 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #0d0d10;
-  color: #d4d4d8;
+  background: #17181e;
+  color: #d4d6dd;
   font-weight: 500;
-  border: 1px solid #202024;
+  border: 1px solid #272935;
   border-radius: 0.375rem;
   padding: 0.55rem 1.15rem;
   font-family: var(--font-geist-mono), monospace;
@@ -96,7 +98,7 @@ a {
 }
 
 .smooth-btn-secondary:hover {
-  background: #141418;
+  background: #20212a;
   border-color: rgba(234, 179, 8, 0.45);
   color: #fef08a;
   transform: translateY(-1px);
@@ -106,9 +108,9 @@ a {
   transform: translateY(0);
 }
 
-/* High-Readability Markdown Documentation (Black & Warm Yellow) */
+/* High-Readability Markdown Documentation (Grey & Yellow Theme) */
 .markdown-body {
-  color: #d4d4d8;
+  color: #d4d6dd;
   line-height: 1.8;
   font-size: 1rem;
 }
@@ -117,7 +119,7 @@ a {
 .markdown-body h2,
 .markdown-body h3,
 .markdown-body h4 {
-  color: #ffffff;
+  color: #fbbf24;
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 0.85rem;
@@ -127,16 +129,16 @@ a {
 
 .markdown-body h1 {
   font-size: 1.75rem;
-  color: #ffffff;
-  border-bottom: 1px solid #202024;
+  color: #fbbf24;
+  border-bottom: 1px solid #272935;
   padding-bottom: 0.75rem;
   margin-bottom: 1.5rem;
 }
 
 .markdown-body h2 {
   font-size: 1.35rem;
-  color: #f4f4f5;
-  border-bottom: 1px dashed rgba(234, 179, 8, 0.25);
+  color: #facc15;
+  border-bottom: 1px dashed rgba(234, 179, 8, 0.3);
   padding-bottom: 0.4rem;
 }
 
@@ -161,9 +163,9 @@ a {
 }
 
 .markdown-body pre {
-  background: #0a0a0d !important;
+  background: #15161b !important;
   color: #f4f4f5 !important;
-  border: 1px solid #202024;
+  border: 1px solid #272935;
   border-radius: 0.5rem;
   padding: 1.15rem;
   overflow-x: auto;
@@ -174,12 +176,12 @@ a {
 
 .markdown-body code {
   font-family: var(--font-geist-mono), monospace;
-  background: #141417;
+  background: #1d1e26;
   color: #fef08a;
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-size: 0.875em;
-  border: 1px solid rgba(234, 179, 8, 0.2);
+  border: 1px solid rgba(234, 179, 8, 0.25);
 }
 
 .markdown-body pre code {
@@ -200,12 +202,12 @@ a {
 
 .markdown-body blockquote {
   border-left: 3px solid #eab308;
-  background: rgba(234, 179, 8, 0.04);
+  background: rgba(234, 179, 8, 0.05);
   padding: 0.75rem 1.25rem;
   margin: 1.25rem 0;
-  color: #e4e4e7;
+  color: #d4d6dd;
   border-radius: 0 0.5rem 0.5rem 0;
-  border: 1px solid #202024;
+  border: 1px solid #272935;
   border-left: 3px solid #eab308;
 }
 
@@ -214,20 +216,20 @@ a {
   border-collapse: collapse;
   margin: 1.75rem 0;
   font-size: 0.875rem;
-  border: 1px solid #202024;
+  border: 1px solid #272935;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .markdown-body th,
 .markdown-body td {
-  border: 1px solid #202024;
+  border: 1px solid #272935;
   padding: 0.65rem 0.85rem;
   text-align: left;
 }
 
 .markdown-body th {
-  background: #141418;
+  background: #1c1d24;
   color: #fef08a;
   font-family: var(--font-geist-mono), monospace;
   font-weight: 600;
@@ -235,14 +237,14 @@ a {
 }
 
 .markdown-body tr:nth-child(even) {
-  background: #08080a;
+  background: #14151a;
 }
 
 .markdown-body img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  border: 1px solid #202024;
+  border: 1px solid #272935;
   margin: 1.5rem auto;
   display: block;
 }
@@ -265,9 +267,9 @@ a {
 .katex-display {
   margin: 1.25rem 0 !important;
   padding: 0.85rem !important;
-  background: #0a0a0d;
+  background: #15161b;
   border-radius: 0.5rem;
-  border: 1px solid #202024;
+  border: 1px solid #272935;
   overflow-x: auto;
   overflow-y: hidden;
   color: #f4f4f5;

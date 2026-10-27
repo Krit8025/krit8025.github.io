@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10">
       {/* Navigation & Header */}
-      <div className="space-y-6 border-b border-[#1f1f23] pb-8">
+      <div className="space-y-6 border-b border-[#272935] pb-8">
         <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
           <Link
             href="/projects"
@@ -56,7 +56,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           <Link
             href="/"
-            className="text-zinc-400 hover:text-white font-medium font-mono text-xs transition-colors"
+            className="text-zinc-400 hover:text-amber-300 font-medium font-mono text-xs transition-colors"
           >
             Home
           </Link>
@@ -74,7 +74,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-mono font-bold text-white tracking-tight">
+          <h1 className="text-2xl sm:text-4xl font-mono font-bold text-amber-400 tracking-tight">
             {project.title}
           </h1>
 
@@ -99,8 +99,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </div>
 
       {/* Rendered README Container */}
-      <article className="rounded-xl border border-[#1f1f23] bg-[#0a0a0d] p-6 sm:p-10 shadow-sm overflow-hidden">
-        <div className="flex items-center justify-between border-b border-[#1f1f23] pb-4 mb-8 text-xs font-mono font-medium text-zinc-400">
+      <article className="rounded-xl border border-[#272935] bg-[#16171d] p-6 sm:p-10 shadow-sm overflow-hidden">
+        <div className="flex items-center justify-between border-b border-[#272935] pb-4 mb-8 text-xs font-mono font-medium text-zinc-400">
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-amber-400" />
             <span className="text-zinc-300">DOCUMENTATION // {project.readmeFile}</span>
