@@ -11,13 +11,13 @@
   --border-muted: #272935;
   --border-active: #3e4152;
 
-  /* Secondary Warm Yellow / Amber Palette */
-  --secondary: #eab308;
+  /* Uniform Yellow Secondary Accent */
+  --secondary: #fbbf24;
   --secondary-hover: #f59e0b;
-  --secondary-light: #fcd34d;
+  --secondary-light: #fbbf24;
   --secondary-muted: #b45309;
-  --secondary-subtle: rgba(234, 179, 8, 0.08);
-  --secondary-border: rgba(234, 179, 8, 0.3);
+  --secondary-subtle: rgba(251, 191, 36, 0.08);
+  --secondary-border: rgba(251, 191, 36, 0.35);
 
   --text-primary: #f8fafc;
   --text-secondary: #d4d6dd;
@@ -56,25 +56,25 @@ a {
   background: #3e4152;
 }
 
-/* Matte Buttons with Warm Yellow Secondary Accents */
+/* Matte Buttons with Uniform Yellow Secondary Accents */
 .smooth-btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #eab308;
+  background: #fbbf24;
   color: #000000;
   font-weight: 600;
   border-radius: 0.375rem;
   padding: 0.55rem 1.15rem;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.8125rem;
-  border: 1px solid #d97706;
+  border: 1px solid #f59e0b;
   transition: all 0.2s ease;
 }
 
 .smooth-btn-primary:hover {
   background: #f59e0b;
-  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.2);
+  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.25);
   transform: translateY(-1px);
 }
 
@@ -99,8 +99,8 @@ a {
 
 .smooth-btn-secondary:hover {
   background: #20212a;
-  border-color: rgba(234, 179, 8, 0.45);
-  color: #fef08a;
+  border-color: rgba(251, 191, 36, 0.5);
+  color: #fbbf24;
   transform: translateY(-1px);
 }
 
@@ -108,7 +108,7 @@ a {
   transform: translateY(0);
 }
 
-/* High-Readability Markdown Documentation (Grey & Yellow Theme) */
+/* High-Readability Markdown Documentation (Grey & Uniform Yellow Theme) */
 .markdown-body {
   color: #d4d6dd;
   line-height: 1.8;
@@ -137,14 +137,14 @@ a {
 
 .markdown-body h2 {
   font-size: 1.35rem;
-  color: #facc15;
-  border-bottom: 1px dashed rgba(234, 179, 8, 0.3);
+  color: #fbbf24;
+  border-bottom: 1px dashed rgba(251, 191, 36, 0.3);
   padding-bottom: 0.4rem;
 }
 
 .markdown-body h3 {
   font-size: 1.15rem;
-  color: #fef08a;
+  color: #fbbf24;
 }
 
 .markdown-body p {

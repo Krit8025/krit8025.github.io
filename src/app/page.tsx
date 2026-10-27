@@ -13,13 +13,13 @@ export default function Home() {
             Krithik Kesav C
           </h1>
           <p className="text-xl sm:text-2xl font-bold text-zinc-100 leading-snug">
-            Final year student of <span className="text-amber-400">Mechanical Engineering</span> at <span className="text-amber-300">BITS Pilani, Hyderabad Campus</span>
+            Final year student of Mechanical Engineering at BITS Pilani, Hyderabad Campus
           </p>
           <p className="text-base sm:text-lg text-zinc-300 max-w-3xl leading-relaxed pt-1">
-            Interested in <span className="text-amber-400 font-semibold">Computational modelling</span> using <span className="text-amber-400 font-semibold">data driven approaches</span> for analyzing mechanical systems.
+            Interested in Computational modelling using data driven approaches for analyzing mechanical systems.
           </p>
           <p className="text-sm sm:text-base text-zinc-400 font-mono italic">
-            P.S. I also love <span className="text-amber-400 font-medium not-italic">machining for fun</span> <span className="text-amber-400 not-italic font-bold">:)</span>
+            P.S. I also love machining for fun :)
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
             className="smooth-btn-secondary"
           >
             <span>Browse Projects</span>
-            <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function Home() {
       <section className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#272935] pb-4">
           <div className="space-y-1">
-            <span className="text-xs font-mono text-amber-400 font-semibold tracking-wider uppercase">
+            <span className="text-xs font-mono text-zinc-400 font-semibold tracking-wider uppercase">
               Featured Work
             </span>
             <h2 className="text-2xl sm:text-3xl font-mono font-bold text-amber-400 tracking-tight">
@@ -69,7 +69,7 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
             <span className="text-zinc-200 font-medium">Hover over image for details</span>
             <span className="text-zinc-500">•</span>
-            <span className="text-amber-400 font-semibold">Click to read further</span>
+            <span className="text-zinc-300">Click to read further</span>
           </div>
         </div>
 

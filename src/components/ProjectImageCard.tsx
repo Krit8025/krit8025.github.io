@@ -65,12 +65,12 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
             </span>
           </div>
 
-          {/* Center: Title in Yellow & Larger Description */}
+          {/* Center: Title in Uniform Yellow Heading & Description */}
           <div className="space-y-2.5 translate-y-1 group-hover:translate-y-0 transition-transform duration-200">
-            <h3 className="font-mono text-lg sm:text-xl font-bold text-amber-300 leading-snug tracking-tight">
+            <h3 className="font-mono text-lg sm:text-xl font-bold text-amber-400 leading-snug tracking-tight">
               {project.title}
             </h3>
-            <p className="text-sm sm:text-[14.5px] text-zinc-100 font-sans leading-relaxed border-l-2 border-amber-400 pl-3 py-0.5 line-clamp-3 sm:line-clamp-4">
+            <p className="text-sm sm:text-[14.5px] text-zinc-100 font-sans leading-relaxed border-l-2 border-[#3e4152] pl-3 py-0.5 line-clamp-3 sm:line-clamp-4">
               {project.description}
             </p>
           </div>

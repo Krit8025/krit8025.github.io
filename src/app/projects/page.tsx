@@ -68,8 +68,8 @@ export default function ProjectsPage() {
                   </span>
                 </div>
 
-                {/* Title in Yellow */}
-                <h2 className="text-lg sm:text-xl font-mono font-bold text-amber-300 group-hover:text-amber-200 transition-colors flex items-center justify-between gap-3">
+                {/* Title in Uniform Yellow Heading */}
+                <h2 className="text-lg sm:text-xl font-mono font-bold text-amber-400 group-hover:text-amber-300 transition-colors flex items-center justify-between gap-3">
                   <span>{project.title}</span>
                   <span className="text-xs font-mono text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:inline-flex items-center gap-1 shrink-0">
                     <span>Read Documentation</span>
