@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} | Krithik Kesav`,
+    title: `${project.title} | Krithik Kesav C`,
     description: project.description,
   };
 }
@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10">
       {/* Navigation & Header */}
-      <div className="space-y-6 border-b border-[#1f2633] pb-8">
+      <div className="space-y-6 border-b border-[#1e2433] pb-8">
         <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
           <Link
             href="/projects"
@@ -56,16 +56,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           <Link
             href="/"
-            className="text-slate-400 hover:text-sky-300 font-medium font-mono text-xs transition-colors"
+            className="text-slate-400 hover:text-slate-200 font-medium font-mono text-xs transition-colors"
           >
-            Visual Gallery
+            Home
           </Link>
         </div>
 
         {/* Project Meta Banner */}
         <div className="space-y-4 pt-2">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="px-3 py-1 rounded-full text-xs font-mono font-medium text-sky-200 bg-sky-500/20 border border-sky-400/30">
+            <span className="px-3 py-1 rounded text-xs font-mono font-medium text-slate-200 bg-slate-800 border border-slate-700">
               {project.tag}
             </span>
             <span className="text-slate-600 font-mono text-xs">•</span>
@@ -74,7 +74,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-mono font-bold text-white tracking-tight">
+          <h1 className="text-2xl sm:text-4xl font-mono font-bold text-slate-100 tracking-tight">
             {project.title}
           </h1>
 
@@ -90,22 +90,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               rel="noopener noreferrer"
               className="smooth-btn-primary"
             >
-              <GithubIcon className="w-4 h-4 text-slate-950" />
+              <GithubIcon className="w-4 h-4 text-slate-900" />
               <span>View Repository on GitHub</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-slate-900" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-slate-700" />
             </a>
           </div>
         </div>
       </div>
 
       {/* Rendered README Container */}
-      <article className="rounded-xl border border-[#1f2633] bg-[#111622] p-6 sm:p-10 shadow-xl overflow-hidden">
-        <div className="flex items-center justify-between border-b border-[#1f2633] pb-4 mb-8 text-xs font-mono font-medium text-slate-400">
+      <article className="rounded-xl border border-[#1e2433] bg-[#10141e] p-6 sm:p-10 shadow-sm overflow-hidden">
+        <div className="flex items-center justify-between border-b border-[#1e2433] pb-4 mb-8 text-xs font-mono font-medium text-slate-400">
           <div className="flex items-center gap-2">
-            <BookOpen className="w-4 h-4 text-sky-400" />
+            <BookOpen className="w-4 h-4 text-slate-400" />
             <span className="text-slate-300">DOCUMENTATION // {project.readmeFile}</span>
           </div>
-          <span className="px-2.5 py-0.5 rounded-full text-[11px] bg-sky-500/10 text-sky-300 border border-sky-400/20 hidden sm:inline">
+          <span className="px-2.5 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300 border border-slate-700 hidden sm:inline">
             Math &amp; Diagram Enabled
           </span>
         </div>
@@ -134,7 +134,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           href={project.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-slate-400 hover:text-sky-300 transition-colors font-medium"
+          className="text-slate-400 hover:text-slate-200 transition-colors font-medium"
         >
           Contribute on GitHub ↗
         </a>
