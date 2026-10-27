@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Mail } from "lucide-react";
 import { GithubIcon } from "@/components/GithubIcon";
+import { LinkedinIcon } from "@/components/LinkedinIcon";
 import { PROJECTS } from "@/data/projects";
 import ProjectImageCard from "@/components/ProjectImageCard";
 
@@ -24,8 +25,8 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Action Buttons: Clean & Muted */}
-        <div className="flex flex-wrap items-center gap-3.5 pt-2 font-mono text-xs">
+        {/* Action Buttons: GitHub, LinkedIn, Email, Projects */}
+        <div className="flex flex-wrap items-center gap-3 pt-2 font-mono text-xs">
           <a
             href="https://github.com/Krit8025"
             target="_blank"
@@ -33,14 +34,32 @@ export default function Home() {
             className="smooth-btn-primary"
           >
             <GithubIcon className="w-4 h-4 text-slate-900" />
-            <span>github.com/Krit8025</span>
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/krithik-kesav"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="smooth-btn-secondary"
+          >
+            <LinkedinIcon className="w-4 h-4 text-slate-300" />
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            href="mailto:krithik2985@gmail.com"
+            className="smooth-btn-secondary"
+          >
+            <Mail className="w-4 h-4 text-slate-300" />
+            <span>Email</span>
           </a>
 
           <Link
             href="/projects"
             className="smooth-btn-secondary"
           >
-            <span>Browse Project Descriptions</span>
+            <span>Browse Projects</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>

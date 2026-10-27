@@ -1,5 +1,6 @@
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { Mail, Sparkles } from "lucide-react";
 import { GithubIcon } from "@/components/GithubIcon";
+import { LinkedinIcon } from "@/components/LinkedinIcon";
 
 export default function Footer() {
   return (
@@ -12,16 +13,37 @@ export default function Footer() {
           <span className="text-slate-500">BITS Pilani, Hyderabad Campus</span>
         </div>
 
-        <div className="flex items-center gap-4">
+        {/* Contact Icons */}
+        <div className="flex items-center gap-2">
           <a
             href="https://github.com/Krit8025"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#10141e] border border-[#1e2433] hover:border-slate-600 hover:text-slate-200 transition-colors font-medium text-slate-300"
+            className="p-2 rounded-md bg-[#10141e] border border-[#1e2433] hover:border-slate-600 hover:text-slate-200 transition-colors"
+            title="GitHub: Krit8025"
+            aria-label="GitHub Profile"
           >
-            <GithubIcon className="w-3.5 h-3.5 text-slate-400" />
-            <span>github.com/Krit8025</span>
-            <ArrowUpRight className="w-3 h-3 text-slate-500" />
+            <GithubIcon className="w-4 h-4 text-slate-400" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/krithik-kesav"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-md bg-[#10141e] border border-[#1e2433] hover:border-slate-600 hover:text-slate-200 transition-colors"
+            title="LinkedIn: krithik-kesav"
+            aria-label="LinkedIn Profile"
+          >
+            <LinkedinIcon className="w-4 h-4 text-slate-400" />
+          </a>
+
+          <a
+            href="mailto:krithik2985@gmail.com"
+            className="p-2 rounded-md bg-[#10141e] border border-[#1e2433] hover:border-slate-600 hover:text-slate-200 transition-colors"
+            title="Email: krithik2985@gmail.com"
+            aria-label="Send Email"
+          >
+            <Mail className="w-4 h-4 text-slate-400" />
           </a>
         </div>
       </div>

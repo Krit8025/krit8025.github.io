@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowUpRight, FolderGit2 } from "lucide-react";
 import { PROJECTS } from "@/data/projects";
 
@@ -32,50 +33,66 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Projects List - Entire Card is Clickable */}
-      <section className="space-y-5">
+      {/* Projects List - Each with Image & Entire Card Clickable */}
+      <section className="space-y-6">
         {PROJECTS.map((project, index) => (
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="group relative block p-6 sm:p-7 rounded-xl border border-[#1e2433] bg-[#10141e] hover:border-slate-500 hover:bg-[#131926] transition-all duration-200 cursor-pointer"
+            className="group relative flex flex-col sm:flex-row gap-6 p-6 sm:p-7 rounded-xl border border-[#1e2433] bg-[#10141e] hover:border-slate-500 hover:bg-[#131926] transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
           >
-            <div className="space-y-3">
-              {/* Header row: Index & Project Tag */}
-              <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-                <span className="font-semibold text-slate-300 bg-slate-800 px-2.5 py-0.5 rounded border border-slate-700">
-                  [{String(index + 1).padStart(2, "0")}] {project.name}
-                </span>
-
-                <span className="px-3 py-0.5 rounded text-xs font-medium font-mono text-slate-300 bg-slate-800 border border-slate-700">
-                  {project.tag}
-                </span>
-              </div>
-
-              {/* Title */}
-              <h2 className="text-lg sm:text-2xl font-mono font-bold text-slate-100 group-hover:text-white transition-colors flex items-center justify-between gap-3">
-                <span>{project.title}</span>
-                <span className="text-xs font-mono text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:inline-flex items-center gap-1 shrink-0">
-                  <span>Read Documentation</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </span>
-              </h2>
-
-              {/* Description */}
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
-                {project.description}
-              </p>
+            {/* Project Image Thumbnail */}
+            <div className="relative w-full sm:w-56 aspect-[16/10] bg-white rounded-lg overflow-hidden shrink-0 border border-slate-700/60 p-2 flex items-center justify-center">
+              <Image
+                src={project.coverImage}
+                alt={project.title}
+                fill
+                sizes="(max-width: 640px) 100vw, 224px"
+                className="object-contain p-2 transition-transform duration-300 ease-out group-hover:scale-105"
+                style={{ objectFit: "contain", objectPosition: "center" }}
+                unoptimized
+              />
             </div>
 
-            {/* Bottom Row */}
-            <div className="flex items-center justify-between pt-3 mt-4 border-t border-[#18202d] text-xs font-mono text-slate-400">
-              <span className="font-medium text-slate-400 group-hover:text-slate-200 flex items-center gap-1 group-hover:underline">
-                → Click anywhere to read further
-              </span>
+            {/* Project Info & Description */}
+            <div className="flex-1 flex flex-col justify-between space-y-3">
+              <div className="space-y-2.5">
+                {/* Header row: Index & Project Tag */}
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                  <span className="font-semibold text-slate-300 bg-slate-800 px-2.5 py-0.5 rounded border border-slate-700">
+                    [{String(index + 1).padStart(2, "0")}] {project.name}
+                  </span>
 
-              <span className="text-slate-500">
-                Branch: {project.defaultBranch}
-              </span>
+                  <span className="px-3 py-0.5 rounded text-xs font-medium font-mono text-slate-200 bg-slate-800 border border-slate-700">
+                    {project.tag}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h2 className="text-lg sm:text-xl font-mono font-bold text-slate-100 group-hover:text-white transition-colors flex items-center justify-between gap-3">
+                  <span>{project.title}</span>
+                  <span className="text-xs font-mono text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:inline-flex items-center gap-1 shrink-0">
+                    <span>Read Documentation</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
+                </h2>
+
+                {/* Description */}
+                <p className="text-sm text-slate-300 leading-relaxed font-sans">
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Bottom Row */}
+              <div className="flex items-center justify-between pt-2 text-xs font-mono text-slate-400">
+                <span className="font-medium text-slate-400 group-hover:text-slate-200 flex items-center gap-1 group-hover:underline">
+                  → Click anywhere to read further
+                </span>
+
+                <span className="text-slate-500">
+                  Branch: {project.defaultBranch}
+                </span>
+              </div>
             </div>
           </Link>
         ))}

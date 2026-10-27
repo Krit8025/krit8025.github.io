@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FolderGit2, Home as HomeIcon } from "lucide-react";
+import { FolderGit2, Home as HomeIcon, Mail } from "lucide-react";
 import { GithubIcon } from "@/components/GithubIcon";
+import { LinkedinIcon } from "@/components/LinkedinIcon";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -22,43 +23,72 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Navigation Tabs */}
-        <nav className="flex items-center gap-1.5 sm:gap-2.5 text-xs sm:text-sm font-mono font-medium">
-          <Link
-            href="/"
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-colors ${
-              pathname === "/"
-                ? "bg-slate-800 text-slate-100 border-slate-700"
-                : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 border-transparent"
-            }`}
-          >
-            <HomeIcon className="w-3.5 h-3.5" />
-            <span>Home</span>
-          </Link>
+        {/* Navigation & Contact Icons */}
+        <div className="flex items-center gap-3">
+          {/* Main Navigation Tabs */}
+          <nav className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-mono font-medium">
+            <Link
+              href="/"
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-colors ${
+                pathname === "/"
+                  ? "bg-slate-800 text-slate-100 border-slate-700"
+                  : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 border-transparent"
+              }`}
+            >
+              <HomeIcon className="w-3.5 h-3.5" />
+              <span>Home</span>
+            </Link>
 
-          <Link
-            href="/projects"
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-colors ${
-              pathname === "/projects" || pathname.startsWith("/projects/")
-                ? "bg-slate-800 text-slate-100 border-slate-700"
-                : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 border-transparent"
-            }`}
-          >
-            <FolderGit2 className="w-3.5 h-3.5" />
-            <span>Projects</span>
-          </Link>
+            <Link
+              href="/projects"
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border transition-colors ${
+                pathname === "/projects" || pathname.startsWith("/projects/")
+                  ? "bg-slate-800 text-slate-100 border-slate-700"
+                  : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 border-transparent"
+              }`}
+            >
+              <FolderGit2 className="w-3.5 h-3.5" />
+              <span>Projects</span>
+            </Link>
+          </nav>
 
-          <a
-            href="https://github.com/Krit8025"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/50 transition-colors"
-            title="GitHub Profile"
-          >
-            <GithubIcon className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">GitHub</span>
-          </a>
-        </nav>
+          {/* Clear Separation Divider */}
+          <div className="h-5 w-px bg-slate-700" aria-hidden="true" />
+
+          {/* Contact Icons Only */}
+          <div className="flex items-center gap-1">
+            <a
+              href="https://github.com/Krit8025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 transition-colors"
+              title="GitHub: Krit8025"
+              aria-label="GitHub Profile"
+            >
+              <GithubIcon className="w-4 h-4" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/krithik-kesav"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 transition-colors"
+              title="LinkedIn: krithik-kesav"
+              aria-label="LinkedIn Profile"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+            </a>
+
+            <a
+              href="mailto:krithik2985@gmail.com"
+              className="p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 transition-colors"
+              title="Email: krithik2985@gmail.com"
+              aria-label="Send Email"
+            >
+              <Mail className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
       </div>
     </header>
   );
