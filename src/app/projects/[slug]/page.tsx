@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeRaw from "rehype-raw";
 import rehypeKatex from "rehype-katex";
-import { ArrowLeft, ArrowUpRight, BookOpen, Gamepad2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, BookOpen } from "lucide-react";
 import { GithubIcon } from "@/components/GithubIcon";
 import { PROJECTS, getProjectBySlug } from "@/data/projects";
 import { getProjectReadme } from "@/lib/github";
@@ -44,11 +44,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10">
       {/* Navigation & Header */}
-      <div className="space-y-6 border-b-2 border-[#1f222e] pb-8">
+      <div className="space-y-6 border-b border-[#1e293b] pb-8">
         <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
           <Link
             href="/projects"
-            className="retro-button bg-white hover:bg-[#bbf7d0] text-[#1f222e]"
+            className="smooth-btn-secondary"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>← Back to Projects</span>
@@ -56,7 +56,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           <Link
             href="/"
-            className="text-zinc-600 hover:text-black font-semibold font-mono text-xs transition-colors"
+            className="text-slate-400 hover:text-sky-300 font-medium font-mono text-xs transition-colors"
           >
             Visual Gallery
           </Link>
@@ -65,23 +65,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Project Meta Banner */}
         <div className="space-y-4 pt-2">
           <div className="flex flex-wrap items-center gap-2">
-            <span
-              className="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold border-2 border-[#1f222e] shadow-[2px_2px_0px_#1f222e]"
-              style={{ backgroundColor: project.accentHex }}
-            >
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium text-sky-200 bg-sky-500/20 border border-sky-400/30">
               {project.name}
             </span>
-            <span className="text-zinc-400 font-mono text-xs">•</span>
-            <span className="text-zinc-600 font-mono text-xs font-semibold">
+            <span className="text-slate-600 font-mono text-xs">•</span>
+            <span className="text-slate-400 font-mono text-xs">
               Branch: {project.defaultBranch}
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-mono font-bold text-[#1f222e] tracking-tight">
+          <h1 className="text-2xl sm:text-4xl font-mono font-bold text-white tracking-tight">
             {project.title}
           </h1>
 
-          <p className="text-sm sm:text-base text-zinc-700 font-sans leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed">
             {project.description}
           </p>
 
@@ -91,24 +88,24 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               href={project.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="retro-button bg-[#bae6fd] hover:bg-[#7dd3fc] text-[#1f222e]"
+              className="smooth-btn-primary"
             >
-              <GithubIcon className="w-4 h-4" />
+              <GithubIcon className="w-4 h-4 text-slate-950" />
               <span>View Repository on GitHub</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-zinc-800" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-slate-900" />
             </a>
           </div>
         </div>
       </div>
 
       {/* Rendered README Container */}
-      <article className="rounded-xl border-2 border-[#1f222e] bg-white p-6 sm:p-10 shadow-[5px_5px_0px_#1f222e] overflow-hidden">
-        <div className="flex items-center justify-between border-b-2 border-[#1f222e] pb-4 mb-8 text-xs font-mono font-bold text-[#1f222e]">
+      <article className="rounded-xl border border-[#1e293b] bg-[#101623] p-6 sm:p-10 shadow-xl overflow-hidden">
+        <div className="flex items-center justify-between border-b border-[#1e293b] pb-4 mb-8 text-xs font-mono font-medium text-slate-400">
           <div className="flex items-center gap-2">
-            <BookOpen className="w-4 h-4 text-emerald-700" />
-            <span>DOCUMENTATION // {project.readmeFile}</span>
+            <BookOpen className="w-4 h-4 text-sky-400" />
+            <span className="text-slate-300">DOCUMENTATION // {project.readmeFile}</span>
           </div>
-          <span className="px-2 py-0.5 rounded bg-[#fef08a] border border-[#1f222e] hidden sm:inline">
+          <span className="px-2.5 py-0.5 rounded-full text-[11px] bg-sky-500/10 text-sky-300 border border-sky-400/20 hidden sm:inline">
             Math &amp; Diagram Enabled
           </span>
         </div>
@@ -127,7 +124,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <div className="pt-4 flex justify-between items-center text-xs font-mono">
         <Link
           href="/projects"
-          className="retro-button bg-white hover:bg-[#fed7aa] text-[#1f222e]"
+          className="smooth-btn-secondary"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to All Projects</span>
@@ -137,7 +134,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           href={project.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold text-zinc-700 hover:text-black transition-colors"
+          className="text-slate-400 hover:text-sky-300 transition-colors font-medium"
         >
           Contribute on GitHub ↗
         </a>

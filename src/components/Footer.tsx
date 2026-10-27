@@ -3,13 +3,13 @@ import { GithubIcon } from "@/components/GithubIcon";
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-[#1f222e] bg-[#f5f1e8] mt-auto">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#1f222e]">
+    <footer className="border-t border-[#1e293b] bg-[#070a0f] mt-auto">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-amber-500" />
-          <span className="font-semibold">Krithik Kesav</span>
+          <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+          <span className="font-medium text-slate-300">Krithik Kesav</span>
           <span>•</span>
-          <span className="text-zinc-600">Pastel Retro Gaming Edition</span>
+          <span className="text-slate-500">BITS Pilani, Hyderabad Campus</span>
         </div>
 
         <div className="flex items-center gap-4">
@@ -17,11 +17,11 @@ export default function Footer() {
             href="https://github.com/Krit8025"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-white border-2 border-[#1f222e] shadow-[2px_2px_0px_#1f222e] hover:bg-[#bbf7d0] hover:-translate-y-0.5 transition-all font-semibold"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#111723] border border-[#1e293b] hover:border-sky-400/50 hover:text-sky-200 transition-all font-medium text-slate-300"
           >
-            <GithubIcon className="w-3.5 h-3.5" />
+            <GithubIcon className="w-3.5 h-3.5 text-sky-300" />
             <span>github.com/Krit8025</span>
-            <ArrowUpRight className="w-3 h-3" />
+            <ArrowUpRight className="w-3 h-3 text-slate-500" />
           </a>
         </div>
       </div>
