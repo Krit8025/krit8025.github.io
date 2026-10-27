@@ -65,9 +65,12 @@ export default function Home() {
               Projects Showcase
             </h2>
           </div>
-          <p className="text-xs sm:text-sm font-mono text-zinc-400">
-            Hover over image to view title • Click to read further
-          </p>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#0a0a0d] border border-zinc-800 text-xs font-mono">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+            <span className="text-zinc-300">Hover over image for details</span>
+            <span className="text-zinc-600">•</span>
+            <span className="text-amber-300 font-medium">Click to read further</span>
+          </div>
         </div>
 
         {/* 2-Column Responsive Image Grid */}

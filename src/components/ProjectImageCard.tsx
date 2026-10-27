@@ -53,7 +53,7 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
           {project.tag}
         </div>
 
-        {/* Hover Overlay: Pure Black Matte with Title & Action */}
+        {/* Hover Overlay: Pure Black Matte with Title, Description & Action */}
         <div className="absolute inset-0 bg-[#000000]/95 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-200 flex flex-col justify-between p-5 sm:p-6 z-20">
           {/* Top Row: Index and Tag */}
           <div className="flex items-center justify-between text-xs font-mono">
@@ -65,13 +65,19 @@ export default function ProjectImageCard({ project, index }: ProjectImageCardPro
             </span>
           </div>
 
-          {/* Center / Bottom: Title & Action */}
-          <div className="space-y-2.5 translate-y-2 group-hover:translate-y-0 transition-transform duration-200">
-            <h3 className="font-mono text-base sm:text-lg font-bold text-white leading-snug">
+          {/* Center: Title & Description */}
+          <div className="space-y-2.5 translate-y-1.5 group-hover:translate-y-0 transition-transform duration-200">
+            <h3 className="font-mono text-base sm:text-lg font-bold text-white leading-snug tracking-tight">
               {project.title}
             </h3>
+            <p className="text-xs sm:text-[13px] text-zinc-300 font-sans leading-relaxed border-l-2 border-amber-400/40 pl-3 py-0.5 line-clamp-3 sm:line-clamp-4">
+              {project.description}
+            </p>
+          </div>
 
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-400 hover:bg-amber-300 text-black font-mono text-xs font-semibold transition-colors">
+          {/* Bottom: Action CTA */}
+          <div className="pt-1">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-amber-400 hover:bg-amber-300 text-black font-mono text-xs font-semibold transition-colors">
               <span>Click to read further</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </div>
