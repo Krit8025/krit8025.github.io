@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles, Mail } from "lucide-react";
-import { GithubIcon } from "@/components/GithubIcon";
-import { LinkedinIcon } from "@/components/LinkedinIcon";
+import { ArrowRight, Mail, FileText } from "lucide-react";
 import { PROJECTS } from "@/data/projects";
 import ProjectImageCard from "@/components/ProjectImageCard";
 
@@ -25,34 +23,25 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Action Buttons: GitHub, LinkedIn, Email, Projects */}
-        <div className="flex flex-wrap items-center gap-3 pt-2 font-mono text-xs">
-          <a
-            href="https://github.com/Krit8025"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="smooth-btn-primary"
-          >
-            <GithubIcon className="w-4 h-4 text-slate-900" />
-            <span>GitHub</span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/krithik-kesav"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="smooth-btn-secondary"
-          >
-            <LinkedinIcon className="w-4 h-4 text-slate-300" />
-            <span>LinkedIn</span>
-          </a>
-
+        {/* Action Buttons: Only Email, Resume, Browse Projects */}
+        <div className="flex flex-wrap items-center gap-3.5 pt-2 font-mono text-xs">
           <a
             href="mailto:krithik2985@gmail.com"
             className="smooth-btn-secondary"
           >
             <Mail className="w-4 h-4 text-slate-300" />
             <span>Email</span>
+          </a>
+
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="smooth-btn-primary"
+            title="Open Resume in new tab"
+          >
+            <FileText className="w-4 h-4 text-slate-900" />
+            <span>Resume</span>
           </a>
 
           <Link
@@ -87,24 +76,6 @@ export default function Home() {
             <ProjectImageCard key={project.slug} project={project} index={idx} />
           ))}
         </div>
-      </section>
-
-      {/* Bottom Switcher: Leads to Textual Projects List */}
-      <section className="p-6 sm:p-7 rounded-xl border border-[#1e2433] bg-[#10141e] hover:border-slate-600 transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div className="space-y-1">
-          <h3 className="font-mono text-base font-bold text-slate-200 flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-slate-400" />
-            Looking for detailed project descriptions?
-          </h3>
-        </div>
-
-        <Link
-          href="/projects"
-          className="smooth-btn-secondary shrink-0"
-        >
-          <span>Open Projects Directory</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </Link>
       </section>
     </main>
   );
