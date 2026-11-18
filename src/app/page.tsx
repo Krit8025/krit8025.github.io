@@ -18,9 +18,6 @@ export default function Home() {
           <p className="text-base sm:text-lg text-zinc-300 max-w-3xl leading-relaxed pt-1">
             Interested in Computational modelling using data driven approaches for analyzing mechanical systems.
           </p>
-          <p className="text-sm sm:text-base text-zinc-400 font-mono italic">
-            P.S. I also love machining for fun :)
-          </p>
         </div>
 
         {/* Action Buttons: Resume First, then Email, Browse Projects */}
